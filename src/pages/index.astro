@@ -1,22 +1,142 @@
 ---
-import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-
-const pageTitle = "Home Page";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<Navigation />
-		<h1>{pageTitle}</h1>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seatplan Generator</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+
+  <body class="bg-gray-50 font-inter text-gray-800">
+    <!-- Navbar Section -->
+    <nav class="bg-transparent fixed top-0 left-0 w-full z-10 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center py-6 px-8">
+        <a href="/" class="text-2xl font-bold text-teal-600">Seatplan Generator</a>
+        <div class="space-x-8 hidden md:flex">
+          <a href="#features" class="text-lg text-gray-700 hover:text-teal-600 transition-colors duration-300">Features</a>
+          <a href="#pricing" class="text-lg text-gray-700 hover:text-teal-600 transition-colors duration-300">Pricing</a>
+          <a href="#contact" class="text-lg text-gray-700 hover:text-teal-600 transition-colors duration-300">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <!-- Mobile Menu Toggle (Optional, can use a menu icon) -->
+          <button class="text-teal-600">☰</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-gradient-to-r from-blue-800 to-teal-600 text-white py-36">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-6xl font-extrabold leading-tight mb-4">
+          Create Your Perfect Seatplan with Ease
+        </h1>
+        <p class="text-xl mb-4 leading-relaxed">
+          Organize your event seating effortlessly. Generate seatplans fast, free, forever—no experience required!
+        </p>
+        <p class="text-2xl font-semibold mb-8">
+          Generate Seatplans Fast, Free, Forever.
+        </p>
+        <button class="bg-teal-500 text-white text-lg font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-teal-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
+          Start Designing Now
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="py-16">
+      <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center space-y-10 md:space-y-0 md:space-x-8">
+        <!-- Text Content -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h2 class="text-4xl font-semibold text-gray-800 mb-6">
+            Tailored for Any Event
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Whether you’re organizing a corporate conference, a wedding, or any other event, our tool is designed to help you create the perfect seating arrangement with minimal effort and maximum control.
+          </p>
+          <ul class="list-inside list-disc text-left text-gray-600 mb-8 space-y-2">
+            <li class="text-lg">Drag-and-Drop Interface</li>
+            <li class="text-lg">Real-Time Preview</li>
+            <li class="text-lg">Share and Export Designs</li>
+          </ul>
+          <button class="bg-teal-500 text-white text-lg font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-teal-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50">
+            Get Started
+          </button>
+        </div>
+
+        <!-- Mockup Image -->
+        <div class="w-full md:w-1/2">
+          <img src="/images/seatplan-mockup.png" alt="Seatplan Generator Mockup" class="w-full rounded-xl shadow-xl hover:scale-105 transform transition-all duration-300" />
+        </div>
+      </div>
+    </main>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gray-50">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-semibold text-gray-800 mb-8">Why Choose Seatplan Generator?</h3>
+        <div class="flex flex-wrap justify-center gap-16">
+          <div class="max-w-xs text-center">
+            <div class="bg-teal-600 text-white p-6 rounded-lg shadow-lg mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6M12 9v6" />
+              </svg>
+              <h4 class="text-xl font-semibold">Easy to Use</h4>
+              <p class="text-gray-200">Our tool is designed for simplicity, even for users with no design experience. Start creating immediately.</p>
+            </div>
+          </div>
+          <div class="max-w-xs text-center">
+            <div class="bg-teal-600 text-white p-6 rounded-lg shadow-lg mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16 17l-4 4m0 0l-4-4m4 4V3" />
+              </svg>
+              <h4 class="text-xl font-semibold">Instant Preview</h4>
+              <p class="text-gray-200">See your seatplan layout instantly. Make adjustments in real-time to suit your event's needs.</p>
+            </div>
+          </div>
+          <div class="max-w-xs text-center">
+            <div class="bg-teal-600 text-white p-6 rounded-lg shadow-lg mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12l5 5L20 7" />
+              </svg>
+              <h4 class="text-xl font-semibold">Efficient Collaboration</h4>
+              <p class="text-gray-200">Easily share and collaborate on seating plans with your team or clients. Enhance your planning process.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+      <div class="container mx-auto text-center">
+        <h3 class="text-3xl font-semibold text-gray-800 mb-8">What Professionals Are Saying</h3>
+        <div class="flex flex-wrap justify-center gap-8">
+          <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm">
+            <p class="text-gray-600 mb-4">
+              "The Seatplan Generator is exactly what we needed. It helped us to organize seating at our conferences quickly and efficiently!"
+            </p>
+            <p class="font-semibold text-teal-500">Emily R.</p>
+            <p class="text-sm text-gray-500">Event Coordinator</p>
+          </div>
+          <div class="bg-white p-8 rounded-xl shadow-lg max-w-sm">
+            <p class="text-gray-600 mb-4">
+              "I used it for our wedding seating, and it made everything seamless. It's such an intuitive tool and saved me so much time!"
+            </p>
+            <p class="font-semibold text-teal-500">Michael S.</p>
+            <p class="text-sm text-gray-500">Groom</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gray-900 text-white py-6">
+      <div class="container mx-auto text-center">
+        <p>&copy; 2025 Seatplan Generator. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
