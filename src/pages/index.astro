@@ -1,27 +1,30 @@
 ---
-import FeaturesSection from "../components/FeatureSection";
+import CallToActionSection from "../components/CtaSection";
+import FeaturesSection from "../components/FeatureSection.astro";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import HeroSection from "../components/Hero";
+import HeroSection from "../components/HeroSection.astro";
 import HowItWorksSection from "../components/HowItWorks";
-import TestimonialsSection from "../components/Testimonials";
 import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Generate seatplans for your classroom, conference, or event.">
+  <meta name="keywords" content="seatplan, generator, classroom, conference, event">
+  <meta name="author" content="Seatplan Generator">
+  <link rel="icon" href="favicon.ico" type="image/x.icon">
   <title>Seatplan Generator</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100">
   <Header />
-  <HeroSection />
+  <HeroSection/>
   <FeaturesSection />
   <HowItWorksSection />
-  <TestimonialsSection />
+
+  <CallToActionSection />
   <Footer />
 </body>
 </html>

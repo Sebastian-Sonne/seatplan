@@ -1,0 +1,49 @@
+---
+const features = [
+  {
+    title: "Quick Setup",
+    description: "Generate seat plans in minutes without any hassle.",
+    icon: "svg/plane.svg",
+  },
+  {
+    title: "Customizable Layouts",
+    description: "Adapt seat arrangements to fit your classroom layout.",
+    icon: "svg/config.svg",
+  },
+  {
+    title: "Student Management",
+    description: "Easily assign students and manage seating preferences.",
+    icon: "svg/manage.svg",
+  },
+  {
+    title: "Printable Plans",
+    description: "Download and print seat plans for easy reference.",
+    icon: "svg/print.svg",
+  },
+];
+---
+
+<section id="features" class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12">Features</h2>
+    <div class="flex flex-wrap -mx-4">
+      {
+        features.map((feature, _) => (
+          <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
+              <img
+                src={feature.icon}
+                alt=""
+                class="h-32 w-32 mb-4 mx-auto border-4 border-gray-300 rounded-full"
+              />
+              <h3 class="text-2xl font-semibold mb-2 text-center">
+                {feature.title}
+              </h3>
+              <p class="text-gray-600 text-center">{feature.description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
