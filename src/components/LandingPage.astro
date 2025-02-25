@@ -1,0 +1,41 @@
+---
+import Footer from "./Footer.astro";
+import StartNow from "./StartNow.astro";
+---
+
+<div class="bg-black mx-auto container text-white">
+    <header>
+        <div class="flex justify-between items-center py-4">
+            <a href="/" class="text-2xl font-bold">Seatplan Generator</a>
+
+            <nav>
+                <ul class="flex gap-4">
+                    <li>
+                        <a href="/features">Features</a>
+                    </li>
+                    <li>
+                        <a href="/pricing">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="h-56">
+        Some hero section here...
+    </section>
+
+    <section class="h-56">
+        Some feature section...
+    </section>
+
+    <StartNow />
+
+    <Footer />
+</div>
