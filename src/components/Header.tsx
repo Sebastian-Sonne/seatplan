@@ -1,30 +1,83 @@
-import PrimaryButton from "./buttons/PrimaryButton";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
-  return (
-    <header className="bg-white shadow-md">
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
-        <div className="flex items-center">
-          <img src="/favicon.svg" alt="Seatplan Generator Logo" className="h-8 w-8 mr-6" />
-          <h1 className="text-2xl font-semibold text-gray-800">Seatplan Generator</h1>
-        </div>
-        {/* Navigation */}
-        <div className="flex flex-row items-center space-x-6">
-          <nav className="hidden md:flex space-x-6">
-            <a href="#features" className="text-gray-600 hover:text-gray-800">Features</a>
-            <a href="#how-it-works" className="text-gray-600 hover:text-gray-800">How It Works</a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-800">Contact</a>
-          </nav>
-          {/* Call to Action */}
-          <PrimaryButton className="" onClick={() => null}>
-            Get Started
-          </PrimaryButton>
+    const [isOpen, setIsOpen] = useState(false);
 
-        </div>
-      </div>
-    </header>
-  );
+    // Variants for menu items animation
+    const menuItemVariants = {
+        hidden: { opacity: 0, y: -20 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    return (
+        <>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className="fixed inset-0 bg-black/80 backdrop-blur-2xl z-10"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
+                        onClick={() => setIsOpen(false)}
+                    />
+                )}
+            </AnimatePresence>
+
+            <header className="relative z-50">
+                <div className="flex justify-between items-center py-4">
+                    <a href="/" className="text-lg md:text-2xl font-jetbrains">Seatplan Generator</a>
+
+                    <nav className="flex items-center gap-6">
+                        {/* Desktop Navigation */}
+                        <ul className="hidden md:flex gap-4">
+                            <li><a href="/features">Features</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+
+                        <a href="/start" className="bg-white text-black px-4 py-2 rounded-lg cursor-pointer">Start Now</a>
+
+                        {/* Hamburger Menu Button */}
+                        <button className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            className="absolute top-full left-0 w-full shadow-md z-20"
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.5, ease: "easeInOut" }}
+                        >
+                            <ul className="flex flex-col gap-4 py-4">
+                                {["Features", "About", "Contact"].map((item, index) => (
+                                    <motion.li
+                                        key={item}
+                                        variants={menuItemVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="hidden"
+                                        transition={{ delay: index * 0.1 }}
+                                        className="hover:bg-white hover:text-black rounded-lg py-2 px-4 transition-colors" 
+                                    >
+                                        <a href={`/${item.toLowerCase()}`} className="block text-lg">{item}</a>
+                                    </motion.li>
+                                ))}
+                            </ul>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </header>
+        </>
+    );
 };
 
 export default Header;
