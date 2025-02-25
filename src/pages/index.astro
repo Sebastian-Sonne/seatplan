@@ -1,19 +1,40 @@
 ---
-import LandingPage from "../components/LandingPage.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header";
+import FeatureSection from "../components/FeatureSection.astro";
 import "../styles/global.css";
+import CallToActionSection from "../components/CtaSection.astro";
 ---
 
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Generate seatplans for your classroom, conference, or event.">
-  <meta name="keywords" content="seatplan, generator, classroom, conference, event">
-  <meta name="author" content="Seatplan Generator">
-  <link rel="icon" href="favicon.ico" type="image/x.icon">
-  <title>Seatplan Generator</title>
-</head>
-<body class="bg-black font-montserrat">
-  <LandingPage />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate seatplans for your classroom, conference, or event."
+    />
+    <meta
+      name="keywords"
+      content="seatplan, generator, classroom, conference, event"
+    />
+    <meta name="author" content="Seatplan Generator" />
+    <link rel="icon" href="favicon.ico" type="image/x.icon" />
+    <title>Seatplan Generator</title>
+  </head>
+  <body class="bg-black text-white font-montserrat">
+    <div class="flex flex-col gap-8 container mx-auto px-6">
+      <Header client:load />
+
+      <section class="h-56">Some hero section here...</section>
+
+      <FeatureSection />
+
+      <section class="h-56">Some other section...</section>
+
+      <CallToActionSection />
+
+      <Footer />
+    </div>
+  </body>
 </html>
