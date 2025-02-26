@@ -27,7 +27,7 @@ const Header = () => {
 
             <header className="relative z-50">
                 <div className="flex justify-between items-center py-4">
-                    <a href="/" className="text-lg md:text-2xl font-jetbrains">Seatplan Generator</a>
+                    <a href="/" className="text-sm sm:text-lg md:text-2xl font-jetbrains">Seatplan Generator</a>
 
                     <nav className="flex items-center gap-6">
                         {/* Desktop Navigation */}
@@ -37,11 +37,11 @@ const Header = () => {
                             <li><a href="/contact">Contact</a></li>
                         </ul>
 
-                        <a href="/start" className="bg-white text-black px-4 py-2 rounded-lg cursor-pointer">Start Now</a>
+                        <a href="/start" className="bg-white text-black text-xs sm:text-base px-4 py-2 rounded-lg cursor-pointer">Start Now</a>
 
                         {/* Hamburger Menu Button */}
                         <button className="md:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-                            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
                             </svg>
                         </button>
@@ -51,7 +51,7 @@ const Header = () => {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="absolute top-full left-0 w-full shadow-md z-20"
+                            className="absolute top-full left-0 w-full z-20"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}

@@ -23,11 +23,50 @@ import CallToActionSection from "../components/CtaSection.astro";
     <title>Seatplan Generator</title>
   </head>
   <body class="bg-black text-white font-montserrat">
+    <div
+      class="bg-black bg-[radial-gradient(at_50%_50%,rgba(0,174,255,0.2)_0px,transparent_60%),radial-gradient(at_25%_25%,rgba(100,100,100,0.2)_0px,transparent_50%),radial-gradient(at_75%_75%,rgba(80,80,80,0.2)_0px,transparent_50%)]"
+    >
+      <div class="flex flex-col gap-8 container mx-auto px-6">
+        <Header client:load />
+
+        <section class="container mx-auto flex flex-col gap-32 mt-20">
+          <div
+            class="flex flex-col justify-center items-center gap-8 md:gap-12 text-center"
+          >
+            <h1
+              class="flex flex-col md:gap-3 xl:gap-6 text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold"
+            >
+              <span> Effortless seating arrangements </span>
+              <span> created in seconds </span>
+            </h1>
+            <p
+              class="flex flex-col sm:gap-2 text-sm sm:text-base md:text-2xl max-w-2xl"
+            >
+              <span> Design flawless seating charts in moments. </span>
+              <span> Drag & drop, share, and print with ease. </span>
+            </p>
+            <a
+              href="/start"
+              class="text-sm sm:text-xl bg-white text-black px-4 sm:px-6 py-2 sm:py-3 rounded-lg cursor-pointer"
+              >Start Now</a
+            >
+          </div>
+
+          <div class="relative w-full min-h-44 overflow-hidden">
+            <div class="absolute left-0 top-8">
+              <img
+                src="/img/mockup_lg.png"
+                alt="Seatplan Generator"
+                class="h-full w-full rounded-xl"
+              />
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
     <div class="flex flex-col gap-8 container mx-auto px-6">
-      <Header client:load />
-
-      <section class="h-56">Some hero section here...</section>
-
       <FeatureSection />
 
       <section class="h-56">Some other section...</section>
