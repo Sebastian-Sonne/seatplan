@@ -30,15 +30,17 @@ const features = [
       {
         features.map((feature, _) => (
           <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-8">
-            <div class="border-2 border-white p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-              <img
-                src={feature.icon}
-                alt=""
-                class="h-32 w-32 mb-4 mx-auto border-4 border-gray-300 rounded-full"
-              />
-              <h3 class="text-2xl font-semibold mb-2 text-center">
-                {feature.title}
-              </h3>
+            <div class=" border-2 border-white p-6 rounded-lg lg:h-96">
+              <div class="lg:h-56">
+                <img
+                  src={feature.icon}
+                  alt=""
+                  class="h-32 w-32 mb-4 mx-auto border-4 border-gray-300 rounded-full"
+                />
+                <h3 class="text-2xl font-semibold mb-2 text-center">
+                  {feature.title}
+                </h3>
+              </div>
               <p class="text-gray-300text-center">{feature.description}</p>
             </div>
           </div>

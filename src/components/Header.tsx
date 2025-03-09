@@ -25,8 +25,8 @@ const Header = () => {
                 )}
             </AnimatePresence>
 
-            <header className="relative z-50">
-                <div className="flex justify-between items-center py-4">
+            <header className="fixed w-full z-50 backdrop-blur-md ">
+                <div className="flex justify-between items-center container mx-auto py-4 px-6">
                     <a href="/" className="text-sm sm:text-lg md:text-2xl font-jetbrains">Seatplan Generator</a>
 
                     <nav className="flex items-center gap-6">
