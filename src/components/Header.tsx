@@ -51,7 +51,7 @@ const Header = () => {
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
-                            className="absolute top-full left-0 w-full z-20"
+                            className="absolute top-full w-full z-20 px-4"
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
