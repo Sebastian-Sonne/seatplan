@@ -1,22 +1,17 @@
 ---
 import Header from "../components/Header";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import Head from "./Head.astro";
 
 const { title, className } = Astro.props;
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title}</title>
-    </head>
-    <body class="bg-black text-white font-montserrat">
-        <Header client:load />
-        <div class={`flex flex-col gap-8 container mx-auto px-6 pt-20 ${className}`}>
-            <slot />
-            <Footer />
-        </div>
-    </body>
-</html>
+<Head title={title}>
+    <Header client:load />
+    <div
+        class={`flex flex-col gap-8 container mx-auto px-6 pt-20 ${className}`}
+    >
+        <slot />
+        <Footer />
+    </div>
+</Head>

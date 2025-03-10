@@ -2,28 +2,13 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header";
 import FeatureSection from "../components/FeatureSection.astro";
-import "../styles/global.css";
 import CallToActionSection from "../components/CtaSection.astro";
 import HeroSection from "../components/HeroSection.astro";
 import TestimonialsSection from "../components/TestimonialSection.astro";
+import Head from "../layouts/Head.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Generate seatplans for your classroom, conference, or event."
-    />
-    <meta
-      name="keywords"
-      content="seatplan, generator, classroom, conference, event"
-    />
-    <meta name="author" content="Seatplan Generator" />
-    <link rel="icon" href="favicon.ico" type="image/x.icon" />
-    <title>Seatplan Generator</title>
-  </head>
+<Head title="Seatplan Generator">
   <body class="bg-black text-white font-montserrat">
     <div
       class="bg-black bg-[radial-gradient(at_50%_50%,rgba(0,174,255,0.2)_0px,transparent_60%),radial-gradient(at_25%_25%,rgba(100,100,100,0.2)_0px,transparent_50%),radial-gradient(at_75%_75%,rgba(80,80,80,0.2)_0px,transparent_50%)]"
@@ -45,4 +30,4 @@ import TestimonialsSection from "../components/TestimonialSection.astro";
       <Footer />
     </div>
   </body>
-</html>
+</Head>

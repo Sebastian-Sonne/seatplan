@@ -1,2 +1,24 @@
 ---
+import Layout from "../layouts/Layout.astro";
 ---
+
+<Layout
+    title="Features | Seatplan Generator"
+    className="min-h-screen justify-between"
+>
+    <section
+        class="flex flex-col gap-4 justify-center h-full my-auto py-20"
+    >
+        <h1 class="font-bold text-4xl">Features</h1>
+        <p>Here are some of the features of the Seatplan Generator:</p>
+        <ul class="list-disc text-left">
+            <li>
+                Generate seatplans for your classroom, event, or any other
+                occasion
+            </li>
+            <li>Customize the number of rows and columns</li>
+            <li>Export your seatplan as an image</li>
+            <li>Save your seatplan for later</li>
+        </ul>
+    </section>
+</Layout>
