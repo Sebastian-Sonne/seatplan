@@ -19,7 +19,7 @@ Built with [Astro](https://astro.build), the landing page provides an overview o
 - [TypeScript](https://www.typescriptlang.org): Typed superset of JavaScript for enhanced code quality.
 
 ## 📂 Project Structure
-
+```bash
 /
 ├── public/             # Static assets (images, fonts, etc.)
 ├── src/
@@ -30,7 +30,7 @@ Built with [Astro](https://astro.build), the landing page provides an overview o
 ├── package.json        # Project metadata and scripts
 ├── tailwind.config.cjs # Tailwind CSS configuration
 └── tsconfig.json       # TypeScript configuration
-
+```
 ## 📦 Installation & Development
 
 To set up the project locally:
