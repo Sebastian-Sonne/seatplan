@@ -1,47 +1,56 @@
-# Astro Starter Kit: Minimal
+# Seatplan Landing Page
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This repository contains the landing page for [seatplan.xyz](https://seatplan.xyz), a web application designed to simplify the creation of seating charts for classrooms, events, and more.  
+Built with [Astro](https://astro.build), the landing page provides an overview of the application's features and guides users on how to get started.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+> Looking for the actual seatplan generator app? You can find it in the [seatplan-generator repository](https://github.com/sebastian-sonne/seatplan-generator).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Features
 
-## 🚀 Project Structure
+- **Responsive Design** – Ensures optimal viewing across devices.
+- **Fast Performance** – Leveraging Astro's partial hydration for speedy load times.
+- **SEO Optimized** – Structured metadata for better search engine visibility.
+- **Clean and Minimalistic UI** – Focused on user engagement and clarity.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 🛠️ Technologies Used
 
-```text
+- [Astro](https://astro.build): Static site generator for building fast websites.
+- [Tailwind CSS](https://tailwindcss.com): Utility-first CSS framework for rapid UI development.
+- [TypeScript](https://www.typescriptlang.org): Typed superset of JavaScript for enhanced code quality.
+
+## 📂 Project Structure
+
 /
-├── public/
+├── public/             # Static assets (images, fonts, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── components/     # Reusable UI components
+│   ├── layouts/        # Layout components
+│   └── pages/          # Page components (e.g., index.astro)
+├── astro.config.mjs    # Astro configuration
+├── package.json        # Project metadata and scripts
+├── tailwind.config.cjs # Tailwind CSS configuration
+└── tsconfig.json       # TypeScript configuration
+
+## 📦 Installation & Development
+
+To set up the project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/sebastian-sonne/seatplan.git
+cd seatplan
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+The site will be available at http://localhost:4321 by default.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 🤝 Contributing
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Contributions are welcome and appreciated! If you have suggestions for improvements, spot a bug, or want to add a new feature, feel free to fork the repo and open a pull request.
+Please make sure your changes are consistent with the code style and structure, and include clear commit messages.
